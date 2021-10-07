@@ -58,12 +58,12 @@ describe OmniAuth::Strategies::Gitea do
 
   context '#raw_info' do
     it 'should use relative paths' do
-      expect(access_token).to receive(:get).with('user').and_return(response)
+      expect(access_token).to receive(:get).with('api/v1/user').and_return(response)
       expect(subject.raw_info).to eq(parsed_response)
     end
 
     it 'should use the header auth mode' do
-      expect(access_token).to receive(:get).with('user').and_return(response)
+      expect(access_token).to receive(:get).with('api/v1/user').and_return(response)
       subject.raw_info
       expect(access_token.options[:mode]).to eq(:header)
     end
