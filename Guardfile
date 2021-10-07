@@ -6,5 +6,5 @@ end
 
 guard 'bundler' do
   watch('Gemfile')
-  watch('omniauth-github.gemspec')
+  watch('omniauth-gitea.gemspec')
 end
